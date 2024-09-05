@@ -32,3 +32,10 @@ html {
     border: 1px solid #ccc;
     border-radius: 8px;
 }
+
+.nav-bar {
+    margin-bottom: 2;
+    background-color: "#262F36";
+    border-bottom: 5;
+    border-color: "primary.main";
+}

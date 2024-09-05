@@ -3,6 +3,8 @@ import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [name, setName] = useState();
@@ -69,10 +71,16 @@ const Register = () => {
           variant="contained"
           color="primary"
           fullWidth
-          sx={{ mt: 2 }}
+          sx={{ mt: 2, color: "#fff" }}
         >
           Register
         </Button>
+        <Typography variant="body2" textAlign="center" sx={{ mt: 2 }}>
+          Already Registered?{" "}
+          <Link component={RouterLink} to="/login">
+            Login Now
+          </Link>
+        </Typography>
       </Box>
     </div>
   );

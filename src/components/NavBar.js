@@ -12,7 +12,7 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import Logo from "../images/snv-samaj-logo.png";
+import "../styles/style.css";
 
 const pages = [
   "Home",
@@ -58,15 +58,23 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ marginBottom: 2 }}>
+    <AppBar
+      position="static"
+      sx={{
+        marginBottom: 2,
+        backgroundColor: "#262F36",
+        borderBottom: 5,
+        borderColor: "primary.main",
+      }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <Box
+          {/* <Box
             component="img"
             sx={{ height: 54, marginRight: 2 }}
             alt="Logo"
             src={Logo}
-          />
+          /> */}
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
