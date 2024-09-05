@@ -25,9 +25,9 @@ git clone https://github.com/SanilShah/Samaj-Website
 - <h3> Database
 
 
-1. Open MongoDB Compass.
+1. Open MongoDB Compass
 
-2. Create a databse connection: `mongodb://127.0.0.1:27017/samaj-website`
+2. Create a database connection as `mongodb://127.0.0.1:27017/samaj-website`
 
 - <h3>Frontend
 
