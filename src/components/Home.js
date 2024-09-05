@@ -1,9 +1,8 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
-import NavBar from "./NavBar";
-import MyCorousel from "./MyCorousel";
 import AppealCard from "./AppealCard";
 import Footer from "./Footer";
+import MyCorousel from "./MyCorousel";
+import NavBar from "./NavBar";
 
 export default function Home() {
   return (

@@ -44,6 +44,19 @@ function NavBar() {
     setAnchorElUser(null);
   };
 
+  const handleLogout = async () => {
+    try {
+      // Clear the authentication token or session data from localStorage/sessionStorage
+      localStorage.removeItem("authToken"); // Remove stored JWT or session data
+      sessionStorage.removeItem("userSession");
+
+      // Redirect to login or homepage
+      window.location.href = "/login";
+    } catch (error) {
+      console.error("Error during logout:", error);
+    }
+  };
+
   return (
     <AppBar position="static" sx={{ marginBottom: 2 }}>
       <Container maxWidth="xl">
@@ -141,7 +154,16 @@ function NavBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                <MenuItem
+                  key={setting}
+                  onClick={() => {
+                    if (setting === "Logout") {
+                      handleLogout(); // Call your logout function here
+                    } else {
+                      handleCloseUserMenu(); // Close the menu for other options
+                    }
+                  }}
+                >
                   <Typography sx={{ textAlign: "center" }}>
                     {setting}
                   </Typography>

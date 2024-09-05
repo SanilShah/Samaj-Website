@@ -1,42 +1,58 @@
-# Material UI - Create React App example
+# VVP IT - Samaj Website
 
-## How to use
+## ❓Requirements
 
-Download the example [or clone the repo](https://github.com/mui/material-ui):
+Before going forward you must have **Node js** installed on your machine.  
+Go to the link below for installation if you don't have installed yet.
 
+- [Node js](https://nodejs.org/en/download)
+- [MongoDB](https://www.mongodb.com/try/download/community)
+
+## ⚙️ Installation & Getting started :
+
+1. Download the repository
+
+2. Unzip folder and open it with [VS Code](https://code.visualstudio.com/)
+
+OR
+
+[Clone the repo](https://github.com/SanilShah/Samaj-Website):
 <!-- #default-branch-switch -->
 
 ```bash
-curl https://codeload.github.com/mui/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/material-ui-cra
-cd material-ui-cra
+git clone https://github.com/SanilShah/Samaj-Website
 ```
+- <h3> Database
 
-Install it and run:
 
-```bash
-npm install
-npm start
-```
+1. Open MongoDB Compass.
 
-or:
+2. Create a databse connection: `mongodb://127.0.0.1:27017/samaj-website`
 
-<!-- #default-branch-switch -->
+- <h3>Frontend
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/p/sandbox/github/mui/material-ui/tree/master/examples/material-ui-cra)
+1. Install dependencies by running `npm install` command
 
-[![Edit on StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/mui/material-ui/tree/master/examples/material-ui-cra)
+3. Run the command `npm run dev` to start live server
 
-## The idea behind the example
+4. Click on `http://localhost:5173/`
 
-<!-- #default-branch-switch -->
+- <h3>Backend
 
-This example demonstrates how you can use [Create React App](https://github.com/facebookincubator/create-react-app) with Material UI.
-It includes `@mui/material` and its peer dependencies, including [Emotion](https://emotion.sh/docs/introduction), the default style engine in Material UI v6.
-If you prefer, you can [use styled-components instead](https://mui.com/material-ui/integrations/interoperability/#styled-components).
+1. Open terminal & go to `cd backend` 
 
-## What's next?
+2. install dependencies by running `npm install` command
 
-<!-- #default-branch-switch -->
+3. Run the command `npm start` or `nodemon index.js` to start live server on database
 
-You now have a working example project.
-You can head back to the documentation and continue by browsing the [templates](https://mui.com/material-ui/getting-started/templates/) section.
+
+- Congratulation 🎉 you have setup the environment successfully!
+
+## 🛠️ Technology Used
+
+This project uses the following technologies:
+
+- [React](https://reactjs.org) and [React Router](https://reacttraining.com/react-router/) for frontend.
+- [Material UI](https://mui.com/material-ui/getting-started/) for styling frontend components.
+- [Express](http://expressjs.com/) and [Node](https://nodejs.org/en/) for the backend.
+- [MongoDB](https://www.mongodb.com/) for the database.
