@@ -39,14 +39,14 @@ git clone https://github.com/SanilShah/Samaj-Website
 
 - <h3>Backend
 
-1. Open terminal & go to `cd backend` 
+1. Open terminal & and do `cd backend` 
 
 2. install dependencies by running `npm install` command
 
 3. Run the command `npm start` or `nodemon index.js` to start live server on database
 
 
-- Congratulation 🎉 you have setup the environment successfully!
+- Congratulations 🎉 you have setup the environment successfully!
 
 ## 🛠️ Technology Used
 
