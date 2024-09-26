@@ -1,6 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
-import Logo from "../images/snv-samaj-logo.png";
+import Logo from "../images/vanik-panch-logo.jpg";
 
 const Header = () => {
   return (

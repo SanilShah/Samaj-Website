@@ -22,10 +22,11 @@ const pages = [
   "Forms",
   "Gallery",
   "Contact Us",
+  "Demise Form",
 ];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-function NavBar() {
+function NavBar({ onSectionChange }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -103,7 +104,7 @@ function NavBar() {
               sx={{ display: { xs: "block", md: "none" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={() => onSectionChange(page)}>
                   <Typography sx={{ textAlign: "center" }}>{page}</Typography>
                 </MenuItem>
               ))}
@@ -132,7 +133,7 @@ function NavBar() {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={() => onSectionChange(page)}
                 sx={{ my: 2, color: "white", display: "block" }}
               >
                 {page}
