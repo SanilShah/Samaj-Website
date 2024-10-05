@@ -19,7 +19,7 @@ export default function Home() {
     <>
       <Header />
       <NavBar onSectionChange={handleSectionChange} />
-      <p>{activeSection}</p>
+      {/* <p>{activeSection}</p> */}
       {activeSection === "Home" ? (
         <>
           <MyCorousel />

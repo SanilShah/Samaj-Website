@@ -39,3 +39,13 @@ html {
     border-bottom: 5;
     border-color: "primary.main";
 }
+
+.textField {
+    height: 56px; 
+    display: flex; 
+  }
+  
+  .textField input {
+    height: 100%; 
+    box-sizing: border-box;
+  }

@@ -1,6 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
+const mysql = require("mysql");
 const FormDataModel = require("./models/FormData");
 
 const app = express();
@@ -8,6 +9,22 @@ app.use(express.json());
 app.use(cors());
 
 mongoose.connect("mongodb://127.0.0.1:27017/samaj-website");
+
+// Create MySQL connection
+const db = mysql.createConnection({
+  host: "localhost",
+  user: "root", // your MySQL username
+  password: "root", // your MySQL password
+  database: "VVP",
+});
+
+db.connect((err) => {
+  if (err) {
+    console.error("Database connection error:", err);
+    return;
+  }
+  console.log("Connected to the MySQL database.");
+});
 
 app.post("/register", (req, res) => {
   // To post / insert data into database
@@ -39,6 +56,19 @@ app.post("/login", (req, res) => {
     // If user not found then
     else {
       res.json("No records found! ");
+    }
+  });
+});
+
+// Endpoint to fetch all people
+app.get("/api/people", (req, res) => {
+  const query = "SELECT id, name FROM people";
+  db.query(query, (err, results) => {
+    if (err) {
+      console.error("Error fetching data:", err);
+      res.status(500).send("Server Error");
+    } else {
+      res.json(results);
     }
   });
 });
