@@ -49,22 +49,23 @@ const DeathInformationForm = () => {
     residenceAddress: "",
     antimYatra: "",
     contactNumber: "",
-    relation1: {
-      name: "",
-      contactNumber: "",
-    },
-    relation2: {
-      name: "",
-      contactNumber: "",
-    },
+    // relation1: {
+    //   name: "",
+    //   contactNumber: "",
+    // },
+    // relation2: {
+    //   name: "",
+    //   contactNumber: "",
+    // },
     relationName1: "",
     relationName2: "",
     relationContactNumber1: "",
     relationContactNumber2: "",
+    contactPhoneNumber: "",
     noPrarthana: false,
     prarthanaDate: dayjs(),
     prarthanaTime: dayjs(),
-    prarthanaAddress: dayjs(),
+    prarthanaAddress: "",
     sendMessageOn: "",
     photo: null,
     photoUrl: null,
@@ -124,13 +125,6 @@ const DeathInformationForm = () => {
       formData.residenceAddress
     } and proceed to ${formData.antimYatra} for the final ceremonies.
 
-    For any further information, you may contact:
-    📞Name: ${formData.relationName1}
-    📞 Contact: ${formData.relationContactNumber1}
-
-    📞Name: ${formData.relationName2}
-    📞 Contact: ${formData.relationContactNumber2}
-
     We humbly request that there will be ${
       formData.noPrarthana ? "no prarthana" : "prarthana"
     } following the ceremonies.
@@ -140,8 +134,8 @@ const DeathInformationForm = () => {
         ? `Prarthana Sabha
 
       Address: ${formData.prarthanaAddress}
-      Date: ${formData.prarthanaDate}
-      Time: ${formData.prarthanaTime}
+      Date: ${formData.prarthanaDate.format("DD/MM/YYYY")}
+      Time: ${formData.prarthanaTime.format("HH:mm A")}
       `
         : ""
     }
@@ -345,7 +339,7 @@ const DeathInformationForm = () => {
         </Grid2>
 
         {/* Contact Number */}
-        <Grid2 size={{ sm: 12, md: 6 }}>
+        <Grid2 size={{ sm: 12, md: 3 }}>
           <TextField
             fullWidth
             label="Contact Number"
@@ -356,9 +350,9 @@ const DeathInformationForm = () => {
           />
         </Grid2>
 
-        <Grid2 size={{ sm: 12, md: 3 }} />
+        <Grid2 size={{ sm: 12, md: 6 }} />
 
-        {/* Name of Relation 1 */}
+        {/* Name of Relation 1
         <Grid2 size={{ sm: 12, md: 3 }}>
           <TextField
             fullWidth
@@ -368,23 +362,23 @@ const DeathInformationForm = () => {
             value={formData.relationName1}
             className="textField"
           />
-        </Grid2>
+        </Grid2> */}
 
-        {/* Contact Number of Relation 1 */}
+        {/* Contact Number of Relation 1
         <Grid2 size={{ sm: 12, md: 6 }}>
           <TextField
             fullWidth
             label="Contact Number of Relation 1"
-            name="contactNumber1"
-            value={formData.relationContactNumber1}
+            name="contactPhoneNumber"
+            value={formData.contackPhoneNumber}
             onChange={handleInputChange}
             className="textField"
           />
         </Grid2>
 
-        <Grid2 size={{ sm: 12, md: 3 }} />
+        <Grid2 size={{ sm: 12, md: 3 }} /> */}
 
-        {/* Name of Relation 2 */}
+        {/* Name of Relation 2
         <Grid2 size={{ sm: 12, md: 3 }}>
           <TextField
             fullWidth
@@ -394,9 +388,9 @@ const DeathInformationForm = () => {
             onChange={handleInputChange}
             className="textField"
           />
-        </Grid2>
+        </Grid2> */}
 
-        {/* Contact Number of Relation 2 */}
+        {/* Contact Number of Relation 2
         <Grid2 size={{ sm: 12, md: 6 }}>
           <TextField
             fullWidth
@@ -450,7 +444,7 @@ const DeathInformationForm = () => {
               />
             </Grid2>
 
-            {/* Prarthana Sabha Address */}
+            {/* Prarthana Sabha Address
             <Grid2 size={{ sm: 12, md: 6 }}>
               <TextField
                 fullWidth
@@ -460,7 +454,7 @@ const DeathInformationForm = () => {
                 onChange={handleInputChange}
                 className="textField"
               />
-            </Grid2>
+            </Grid2> */}
           </>
         )}
 
@@ -485,7 +479,7 @@ const DeathInformationForm = () => {
         {/* Generate Text File Button */}
         <Grid2 size={{ sm: 12, md: 3 }}>
           <Button variant="contained" onClick={handleGenerateFile}>
-            Generate Text File
+            Generate Text
           </Button>
         </Grid2>
 

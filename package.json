@@ -20,6 +20,7 @@
     "date-fns": "^2.30.0",
     "dayjs": "^1.11.13",
     "js-file-download": "^0.4.12",
+    "mssql": "^11.0.1",
     "react": "latest",
     "react-dom": "latest",
     "react-material-ui-carousel": "^3.4.2",
